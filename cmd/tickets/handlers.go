@@ -158,7 +158,7 @@ func saveRedis(key string, value interface{}) {
 
 func registercompany(c *company) error {
 	if len(c.Slots) == 0 {
-		c.Slots = make([]int, 480)
+		c.Slots = make([]int, 481)
 	}
 	companyMap[c.CompanyID] = c
 	return nil
@@ -198,7 +198,7 @@ func pollTicket(companyID string) int {
 	if !ok {
 		return -1
 	}
-	for i := 0; i < len(company.Slots); i++ {
+	for i := 1; i < len(company.Slots); i++ {
 		mutex.Lock()
 		if company.Slots[i] > 0 {
 			mutex.Unlock()

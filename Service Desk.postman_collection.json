@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "9e839218-ab31-4ffc-a6ec-be1eb81f5f55",
+		"name": "Service Desk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegisterAgents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"companyID\":\"abc\",\"nAgents\":20}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/registerAgents",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registerAgents"
+					]
+				},
+				"description": "To register more agents for the company"
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterCompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"companyID\":\"abc\",\"agents\":123,\"logoutTime\":17}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/registercompany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registercompany"
+					]
+				},
+				"description": "To register a company"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTicket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"companyID\":\"abc\",\"priority\":\"gold\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/createTicket",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createTicket"
+					]
+				},
+				"description": "To create a ticket with a priority for a company"
+			},
+			"response": []
+		}
+	]
+}
